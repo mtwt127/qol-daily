@@ -958,3 +958,361 @@ Processing by PostsController#index as TURBO_STREAM
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4358)
 
 
+Started GET "/daily" for ::1 at 2024-06-08 20:49:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 17354)
+  Rendered layout layouts/application.html.erb (Duration: 126.8ms | Allocations: 51179)
+Completed 200 OK in 163ms (Views: 128.2ms | ActiveRecord: 2.4ms | Allocations: 61269)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:56:33 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1814)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3616)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>日記投稿</h3>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.text_area :body, size: "60x10" %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
+  <p><%= form.submit "投稿"%></p>
+<% end %>
+
+<h3>日記一覧</h3>
+
+<% @posts.each do |post|%>
+    <form action= "/daily/<%= post.id %>" method = "POST">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input name="_method" type="hidden" value="DELETE">
+        <h4>
+        <%= post.title %>
+        <button type="submit">DEL</button>
+        </h4>
+    </form>
+    <p><%= post.body %></p>
+    <p>
+        <% if post.qol == 0%>Low
+        <% if post.qol == 1%>Mediam
+        <% if post.qol == 2%>High
+    </p>
+            
+        
+<% end %>
+
+):
+1:    <h3>日記投稿</h3>
+2:    
+3:    <%= form_with model: @post do |form| %>
+4:      <p><%= form.text_field :title %></p>
+5:      <p><%= form.text_area :body, size: "60x10" %></p>
+6:      <p>
+7:        <%= form.label :qol, "QOL" %><br>
+8:        <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+9:      </p>
+10:      <p><%= form.submit "投稿"%></p>
+11:    <% end %>
+12:    
+13:    <h3>日記一覧</h3>
+14:    
+15:    <% @posts.each do |post|%>
+16:        <form action= "/daily/<%= post.id %>" method = "POST">
+17:            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+18:            <input name="_method" type="hidden" value="DELETE">
+19:            <h4>
+20:            <%= post.title %>
+21:            <button type="submit">DEL</button>
+22:            </h4>
+23:        </form>
+24:        <p><%= post.body %></p>
+25:        <p>
+26:            <% if post.qol == 0%>Low
+27:            <% if post.qol == 1%>Mediam
+28:            <% if post.qol == 2%>High
+29:        </p>
+30:                
+31:            
+32:    <% end %>
+  
+app/views/posts/index.html.erb:34: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/daily" for ::1 at 2024-06-08 20:57:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1449)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3236)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>日記投稿</h3>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.text_area :body, size: "60x10" %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
+  <p><%= form.submit "投稿"%></p>
+<% end %>
+
+<h3>日記一覧</h3>
+
+<% @posts.each do |post|%>
+    <form action= "/daily/<%= post.id %>" method = "POST">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input name="_method" type="hidden" value="DELETE">
+        <h4>
+        <%= post.title %>
+        <button type="submit">DEL</button>
+        </h4>
+    </form>
+    <p><%= post.body %></p>
+    <p><% if post.qol == 0%>Low
+       <% if post.qol == 1%>Mediam
+       <% if post.qol == 2%>High
+    </p>            
+        
+<% end %>
+
+):
+1:    <h3>日記投稿</h3>
+2:    
+3:    <%= form_with model: @post do |form| %>
+4:      <p><%= form.text_field :title %></p>
+5:      <p><%= form.text_area :body, size: "60x10" %></p>
+6:      <p>
+7:        <%= form.label :qol, "QOL" %><br>
+8:        <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+9:      </p>
+10:      <p><%= form.submit "投稿"%></p>
+11:    <% end %>
+12:    
+13:    <h3>日記一覧</h3>
+14:    
+15:    <% @posts.each do |post|%>
+16:        <form action= "/daily/<%= post.id %>" method = "POST">
+17:            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+18:            <input name="_method" type="hidden" value="DELETE">
+19:            <h4>
+20:            <%= post.title %>
+21:            <button type="submit">DEL</button>
+22:            </h4>
+23:        </form>
+24:        <p><%= post.body %></p>
+25:        <p><% if post.qol == 0%>Low
+26:           <% if post.qol == 1%>Mediam
+27:           <% if post.qol == 2%>High
+28:        </p>            
+29:            
+30:    <% end %>
+  
+app/views/posts/index.html.erb:32: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/daily" for ::1 at 2024-06-08 20:58:53 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1455)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3237)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>日記投稿</h3>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.text_area :body, size: "60x10" %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
+  <p><%= form.submit "投稿"%></p>
+<% end %>
+
+<h3>日記一覧</h3>
+
+<% @posts.each do |post|%>
+    <form action= "/daily/<%= post.id %>" method = "POST">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input name="_method" type="hidden" value="DELETE">
+        <h4>
+        <%= post.title %>
+        <button type="submit">DEL</button>
+        </h4>
+    </form>
+    <p><%= post.body %></p>
+    <p>
+        <% if post.qol == 0 %>    Low
+        <% elsif post.qol == 1 %> Mediam
+        <% elsif post.qol == 2 %> High
+    </p>            
+        
+<% end %>
+
+):
+1:    <h3>日記投稿</h3>
+2:    
+3:    <%= form_with model: @post do |form| %>
+4:      <p><%= form.text_field :title %></p>
+5:      <p><%= form.text_area :body, size: "60x10" %></p>
+6:      <p>
+7:        <%= form.label :qol, "QOL" %><br>
+8:        <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+9:      </p>
+10:      <p><%= form.submit "投稿"%></p>
+11:    <% end %>
+12:    
+13:    <h3>日記一覧</h3>
+14:    
+15:    <% @posts.each do |post|%>
+16:        <form action= "/daily/<%= post.id %>" method = "POST">
+17:            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+18:            <input name="_method" type="hidden" value="DELETE">
+19:            <h4>
+20:            <%= post.title %>
+21:            <button type="submit">DEL</button>
+22:            </h4>
+23:        </form>
+24:        <p><%= post.body %></p>
+25:        <p>
+26:            <% if post.qol == 0 %>    Low
+27:            <% elsif post.qol == 1 %> Mediam
+28:            <% elsif post.qol == 2 %> High
+29:        </p>            
+30:            
+31:    <% end %>
+  
+app/views/posts/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/daily" for ::1 at 2024-06-08 20:59:37 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1450)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3232)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>日記投稿</h3>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.text_area :body, size: "60x10" %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
+  <p><%= form.submit "投稿"%></p>
+<% end %>
+
+<h3>日記一覧</h3>
+
+<% @posts.each do |post|%>
+    <form action= "/daily/<%= post.id %>" method = "POST">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input name="_method" type="hidden" value="DELETE">
+        <h4>
+        <%= post.title %>
+        <button type="submit">DEL</button>
+        </h4>
+    </form>
+    <p><%= post.body %></p>
+    <p>
+        <% if post.qol == 0 %>
+          Low
+        <% elsif post.qol == 1 %>
+          Mediam
+        <% elsif post.qol == 2 %>
+          High
+    </p>            
+        
+<% end %>
+
+):
+1:    <h3>日記投稿</h3>
+2:    
+3:    <%= form_with model: @post do |form| %>
+4:      <p><%= form.text_field :title %></p>
+5:      <p><%= form.text_area :body, size: "60x10" %></p>
+6:      <p>
+7:        <%= form.label :qol, "QOL" %><br>
+8:        <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+9:      </p>
+10:      <p><%= form.submit "投稿"%></p>
+11:    <% end %>
+12:    
+13:    <h3>日記一覧</h3>
+14:    
+15:    <% @posts.each do |post|%>
+16:        <form action= "/daily/<%= post.id %>" method = "POST">
+17:            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+18:            <input name="_method" type="hidden" value="DELETE">
+19:            <h4>
+20:            <%= post.title %>
+21:            <button type="submit">DEL</button>
+22:            </h4>
+23:        </form>
+24:        <p><%= post.body %></p>
+25:        <p>
+26:            <% if post.qol == 0 %>
+27:              Low
+28:            <% elsif post.qol == 1 %>
+29:              Mediam
+30:            <% elsif post.qol == 2 %>
+31:              High
+32:        </p>            
+33:            
+34:    <% end %>
+  
+app/views/posts/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/daily" for ::1 at 2024-06-08 21:00:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 7022)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 22870)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 2.1ms | Allocations: 24655)
+
+
+Started POST "/" for ::1 at 2024-06-08 21:01:17 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"test", "body"=>"test", "qol"=>"0", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f86422dc948>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"test", "body"=>"test", "qol"=>"0", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (3.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "test"], ["body", "test"], ["qol", 0], ["created_at", "2024-06-08 12:01:17.885823"], ["updated_at", "2024-06-08 12:01:17.885823"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms | Allocations: 4241)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 21:01:17 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3231)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4501)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4860)
+
+

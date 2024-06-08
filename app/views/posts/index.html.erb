@@ -3,7 +3,10 @@
 <%= form_with model: @post do |form| %>
   <p><%= form.text_field :title %></p>
   <p><%= form.text_area :body, size: "60x10" %></p>
-  <p><%= form.text_field :qol %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
   <p><%= form.submit "投稿"%></p>
 <% end %>
 
@@ -18,7 +21,12 @@
         <button type="submit">DEL</button>
         </h4>
     </form>
-        <p><%= post.body %></p>
-        <p><%= post.qol%></p>
+    <p><%= post.body %></p>
+    <p>
+        <% if post.qol == 0 %>    Low
+        <% elsif post.qol == 1 %> Mediam
+        <% elsif post.qol == 2 %> High
+        <% end %>
+    </p>            
         
 <% end %>
