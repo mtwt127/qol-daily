@@ -21,3 +21,373 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 390ms (Views: 334.2ms | ActiveRecord: 2.6ms | Allocations: 113496)
 
 
+Started GET "/" for ::1 at 2024-06-08 17:49:13 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 7695)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 7818)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 2.3ms | Allocations: 17970)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation []>
+Did you mean?  to_xml):
+    1: <%= form_with model: @posts do |form| %>
+    2:   <%= form.text_field :title %>
+    3:   <%= form.text_area :body, size: "60x10" %>
+    4:   <%= form.submit %>
+  
+app/views/posts/index.html.erb:1
+Started GET "/" for ::1 at 2024-06-08 17:50:05 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5860)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5947)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.8ms | Allocations: 7704)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation []>
+Did you mean?  to_xml):
+    1: <h1>日記投稿</h1>
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:   <%= form.text_field :title %>
+    5:   <%= form.text_area :body, size: "60x10" %>
+    6:   <%= form.submit %>
+  
+app/views/posts/index.html.erb:3
+Started GET "/" for ::1 at 2024-06-08 17:53:15 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 5861)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5948)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.2ms | Allocations: 7708)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation []>
+Did you mean?  to_xml):
+    1: <h1>日記投稿</h1>
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:   <%= form.text_field :title %>
+    5:   <%= form.text_area :body, size: "60x10" %>
+    6:   <%= form.submit %>
+  
+app/views/posts/index.html.erb:3
+Started GET "/" for ::1 at 2024-06-08 17:54:50 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 5867)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5954)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms | Allocations: 7709)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation []>
+Did you mean?  to_xml):
+    1: <h1>日記投稿</h1>
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:   <%= form.text_field :title %>
+    5:   <%= form.text_area :body, size: "60x10" %>
+    6:   <%= form.text_field :qol %>
+  
+app/views/posts/index.html.erb:3
+Started GET "/" for ::1 at 2024-06-08 17:57:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5869)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5956)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms | Allocations: 7708)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation []>
+Did you mean?  to_xml):
+    1: <h1>日記投稿</h1>
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:   <%= form.text_field :title %>
+    5:   <%= form.text_area :body, size: "60x10" %>
+    6:   <%= form.label :qol %>
+  
+app/views/posts/index.html.erb:3
+Started GET "/" for ::1 at 2024-06-08 17:59:47 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5240)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 40649)
+Completed 200 OK in 84ms (Views: 77.0ms | ActiveRecord: 4.8ms | Allocations: 42466)
+
+
+Started GET "/" for ::1 at 2024-06-08 18:00:22 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3935)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 19630)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.0ms | Allocations: 21413)
+
+
+Started GET "/" for ::1 at 2024-06-08 18:00:35 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3966)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 19782)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 1.7ms | Allocations: 21570)
+
+
+Started GET "/" for ::1 at 2024-06-08 18:00:42 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3946)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 19682)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 2.0ms | Allocations: 21465)
+
+
+Started POST "/" for ::1 at 2024-06-08 18:01:01 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for ::1 at 2024-06-08 18:01:01 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2696)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3975)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4281)
+
+
+Started GET "/" for ::1 at 2024-06-08 18:01:05 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2568)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3732)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3995)
+
+
+Started POST "/" for ::1 at 2024-06-08 18:02:33 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"test", "body"=>"test", "qol"=>"0", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007fd9a56f6a68>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"test", "body"=>"test", "qol"=>"0", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (4.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "test"], ["body", "test"], ["qol", 0], ["created_at", "2024-06-08 09:02:33.935053"], ["updated_at", "2024-06-08 09:02:33.935053"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/dailies
+Completed 302 Found in 43ms (ActiveRecord: 11.3ms | Allocations: 15539)
+
+
+Started GET "/dailies" for ::1 at 2024-06-08 18:02:33 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3852)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 19641)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms | Allocations: 20781)
+
+
+Started GET "/dailies" for ::1 at 2024-06-08 18:04:06 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 6925)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 22716)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 4.0ms | Allocations: 24502)
+
+
+Started GET "/dailies" for ::1 at 2024-06-08 18:04:36 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 6966)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 22754)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 2.5ms | Allocations: 24547)
+
+
+Started GET "/dailies" for ::1 at 2024-06-08 18:05:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/dailies"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 18:05:34 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 6971)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 22760)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 2.4ms | Allocations: 24500)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:09:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 16281)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 50390)
+Completed 200 OK in 117ms (Views: 85.5ms | ActiveRecord: 3.2ms | Allocations: 60478)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:11:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7931)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8028)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.5ms | Allocations: 9795)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    12: <%= @posts.each do |post|%>
+    13:     <h2><% post.title %></h2>
+    14:     <p>><% post.body %></p>
+    15:     <p><% post.qo l%></p>
+    16: <% end %>
+  
+app/views/posts/index.html.erb:15
+app/views/posts/index.html.erb:12
+Started GET "/daily" for ::1 at 2024-06-08 18:11:52 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 7717)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 7804)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.9ms | Allocations: 9564)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    12: <%= @posts.each do |post|%>
+    13:     <h2><% post.title %></h2>
+    14:     <p><% post.body %></p>
+    15:     <p><% post.qo l%></p>
+    16: <% end %>
+  
+app/views/posts/index.html.erb:15
+app/views/posts/index.html.erb:12
+Started GET "/daily" for ::1 at 2024-06-08 18:11:59 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 6976)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 22792)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 2.5ms | Allocations: 24582)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:12:39 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6900)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 22596)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.6ms | Allocations: 24388)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:14:38 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6859)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 22554)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 1.3ms | Allocations: 24340)
+
+
+Started POST "/" for ::1 at 2024-06-08 18:15:15 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"test1", "body"=>"test1", "qol"=>"1", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f9d1e64eb38>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"test1", "body"=>"test1", "qol"=>"1", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "test1"], ["body", "test1"], ["qol", 1], ["created_at", "2024-06-08 09:15:15.832062"], ["updated_at", "2024-06-08 09:15:15.832062"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms | Allocations: 4107)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:15:15 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2846)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4123)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4483)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:15:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7090)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 22873)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.8ms | Allocations: 24660)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:17:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 6778)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 22535)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.2ms | Allocations: 24321)
+
+
