@@ -257,3 +257,137 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 2.4ms | Allocations: 24500)
 
 
+Started GET "/daily" for ::1 at 2024-06-08 18:09:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 16281)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 50390)
+Completed 200 OK in 117ms (Views: 85.5ms | ActiveRecord: 3.2ms | Allocations: 60478)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:11:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7931)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8028)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.5ms | Allocations: 9795)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    12: <%= @posts.each do |post|%>
+    13:     <h2><% post.title %></h2>
+    14:     <p>><% post.body %></p>
+    15:     <p><% post.qo l%></p>
+    16: <% end %>
+  
+app/views/posts/index.html.erb:15
+app/views/posts/index.html.erb:12
+Started GET "/daily" for ::1 at 2024-06-08 18:11:52 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 7717)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 7804)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.9ms | Allocations: 9564)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    12: <%= @posts.each do |post|%>
+    13:     <h2><% post.title %></h2>
+    14:     <p><% post.body %></p>
+    15:     <p><% post.qo l%></p>
+    16: <% end %>
+  
+app/views/posts/index.html.erb:15
+app/views/posts/index.html.erb:12
+Started GET "/daily" for ::1 at 2024-06-08 18:11:59 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 6976)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 22792)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 2.5ms | Allocations: 24582)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:12:39 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6900)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 22596)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.6ms | Allocations: 24388)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:14:38 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6859)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 22554)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 1.3ms | Allocations: 24340)
+
+
+Started POST "/" for ::1 at 2024-06-08 18:15:15 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"test1", "body"=>"test1", "qol"=>"1", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f9d1e64eb38>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"test1", "body"=>"test1", "qol"=>"1", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "test1"], ["body", "test1"], ["qol", 1], ["created_at", "2024-06-08 09:15:15.832062"], ["updated_at", "2024-06-08 09:15:15.832062"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms | Allocations: 4107)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:15:15 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2846)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4123)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4483)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:15:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7090)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 22873)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.8ms | Allocations: 24660)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 18:17:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 6778)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 22535)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.2ms | Allocations: 24321)
+
+
