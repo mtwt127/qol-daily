@@ -1,0 +1,11 @@
+<h3>日記投稿</h3>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.text_area :body, size: "60x10" %></p>
+  <p>
+    <%= form.label :qol, "QOL" %><br>
+    <%= form.select :qol, [['Low', 0], ['Medium', 1], ['High', 2]] %>
+  </p>
+  <p><%= form.submit "投稿"%></p>
+<% end %>
