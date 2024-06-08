@@ -1,7 +1,16 @@
+<h1>日記投稿</h1>
+
+<%= form_with model: @post do |form| %>
+  <p><%= form.text_field :title %>
+  <p><%= form.text_area :body, size: "60x10" %>
+  <p><%= form.text_field :qol %>
+  <p><%= form.submit "投稿"%>
+<% end %>
+
 <h1>日記一覧</h1>
 
 <%= @posts.each do |post|%>
-    <p><% post.title%></p>
-    <p><% post.body%></p>
-    <p><% post.qol%></p>
+    <p><% post.title%>
+    <p><% post.body%>
+    <p><% post.qol%>
 <% end %>
