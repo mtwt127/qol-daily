@@ -884,3 +884,77 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4041)
 
 
+Started GET "/daily" for ::1 at 2024-06-08 20:33:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.2ms | Allocations: 16129)
+  Rendered layout layouts/application.html.erb (Duration: 128.8ms | Allocations: 49818)
+Completed 200 OK in 167ms (Views: 131.4ms | ActiveRecord: 1.1ms | Allocations: 59906)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:13 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2830)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4108)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 4449)
+
+
+Started POST "/" for ::1 at 2024-06-08 20:33:23 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"テスト", "body"=>"テスト", "qol"=>"2", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007fca1d622ac0>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"テスト", "body"=>"テスト", "qol"=>"2", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (3.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "テスト"], ["body", "テスト"], ["qol", 2], ["created_at", "2024-06-08 11:33:23.812989"], ["updated_at", "2024-06-08 11:33:23.812989"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms | Allocations: 4246)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:23 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2740)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4012)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4375)
+
+
+Started DELETE "/daily/3" for ::1 at 2024-06-08 20:33:25 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `deleteDaily'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 4681)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:25 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2759)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4032)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4358)
+
+
