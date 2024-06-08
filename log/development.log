@@ -391,3 +391,570 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.2ms | Allocations: 24321)
 
 
+Started GET "/daily" for ::1 at 2024-06-08 19:56:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 16032)
+  Rendered layout layouts/application.html.erb (Duration: 131.2ms | Allocations: 49917)
+Completed 200 OK in 167ms (Views: 133.8ms | ActiveRecord: 2.6ms | Allocations: 60005)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:04:58 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 16048)
+  Rendered layout layouts/application.html.erb (Duration: 156.5ms | Allocations: 50347)
+Completed 200 OK in 199ms (Views: 153.7ms | ActiveRecord: 7.1ms | Allocations: 60435)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:07:07 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 6771)
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 22464)
+Completed 200 OK in 50ms (Views: 23.8ms | ActiveRecord: 24.2ms | Allocations: 24251)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:09:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6800)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 22574)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 1.0ms | Allocations: 24362)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:10:06 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 6877)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 22655)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.0ms | Allocations: 24443)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:10:59 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 6808)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 22499)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 2.5ms | Allocations: 24281)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:11:07 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2633)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3797)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms | Allocations: 4083)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:11:42 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 6846)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 22631)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 1.2ms | Allocations: 24425)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:12:38 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6841)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 22620)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 1.6ms | Allocations: 24413)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:13:48 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6831)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 22612)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.9ms | Allocations: 24395)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:23:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 6452)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 22238)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 2.9ms | Allocations: 24026)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:23:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:23:57 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2860)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4138)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4446)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:24:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:24:02 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2650)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3821)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 4084)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:24:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:24:03 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2644)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3815)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4079)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:53 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:53 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2629)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3800)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4064)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:54 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2656)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3827)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 4091)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2658)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3829)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4093)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2656)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3827)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4091)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2650)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3821)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 4085)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2641)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3812)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4077)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2653)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3824)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 4089)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2647)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3818)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 4083)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2656)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3827)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4092)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:57 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2641)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3812)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4077)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:58 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2662)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3833)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4097)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:25:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:25:58 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2635)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3806)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4071)
+
+
+Started GET "/daily/2?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:26:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:26:00 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2636)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3807)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4072)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:26:38 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 77.4ms | Allocations: 6907)
+  Rendered layout layouts/application.html.erb (Duration: 228.0ms | Allocations: 22701)
+Completed 200 OK in 232ms (Views: 228.4ms | ActiveRecord: 1.3ms | Allocations: 24486)
+
+
+Started DELETE "/daily/2" for ::1 at 2024-06-08 20:26:40 +0900
+  
+ActionController::RoutingError (No route matches [DELETE] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:26:40 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2779)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4052)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4357)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:29:26 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 6931)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 22718)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 1.1ms | Allocations: 24507)
+
+
+Started DELETE "/daily/2" for ::1 at 2024-06-08 20:29:28 +0900
+  
+ActionController::RoutingError (No route matches [DELETE] "/daily/2"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:29:28 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2651)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3822)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4108)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:31:11 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 6946)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 22725)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 1.1ms | Allocations: 24510)
+
+
+Started DELETE "/daily/2" for ::1 at 2024-06-08 20:31:13 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mPost Destroy (3.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 26ms (ActiveRecord: 8.5ms | Allocations: 5258)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:31:13 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2746)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4022)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4390)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:31:31 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6967)
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 22690)
+Completed 200 OK in 103ms (Views: 97.6ms | ActiveRecord: 2.5ms | Allocations: 24478)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:31:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:31:32 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2606)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3776)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4061)
+
+
+Started GET "/daily/1?authenticity_token=[FILTERED]&_method=DELETE" for ::1 at 2024-06-08 20:31:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/1"):
+  
+Started GET "/daily" for ::1 at 2024-06-08 20:31:33 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2605)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3776)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4041)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.2ms | Allocations: 16129)
+  Rendered layout layouts/application.html.erb (Duration: 128.8ms | Allocations: 49818)
+Completed 200 OK in 167ms (Views: 131.4ms | ActiveRecord: 1.1ms | Allocations: 59906)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:13 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2830)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4108)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 4449)
+
+
+Started POST "/" for ::1 at 2024-06-08 20:33:23 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"テスト", "body"=>"テスト", "qol"=>"2", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007fca1d622ac0>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"テスト", "body"=>"テスト", "qol"=>"2", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mPost Create (3.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "テスト"], ["body", "テスト"], ["qol", 2], ["created_at", "2024-06-08 11:33:23.812989"], ["updated_at", "2024-06-08 11:33:23.812989"]]
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:8:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms | Allocations: 4246)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:23 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2740)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4012)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4375)
+
+
+Started DELETE "/daily/3" for ::1 at 2024-06-08 20:33:25 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `deleteDaily'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:14:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 4681)
+
+
+Started GET "/daily" for ::1 at 2024-06-08 20:33:25 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2759)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4032)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4358)
+
+

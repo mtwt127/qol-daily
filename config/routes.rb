@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get '/daily', to: "posts#index"
   post '/daily', to: "posts#addDaily"
+
+  delete '/daily/:id', to: "posts#deleteDaily"
 end
