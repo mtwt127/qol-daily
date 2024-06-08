@@ -10,7 +10,15 @@
 <h3>日記一覧</h3>
 
 <% @posts.each do |post|%>
-        <h4><%= post.title %></h4>
+    <form action= "/daily/<%= post.id %>" method = "POST">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input name="_method" type="hidden" value="DELETE">
+        <h4>
+        <%= post.title %>
+        <button type="submit">DEL</button>
+        </h4>
+    </form>
         <p><%= post.body %></p>
         <p><%= post.qol%></p>
+        
 <% end %>
