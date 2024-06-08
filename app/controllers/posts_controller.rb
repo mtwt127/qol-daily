@@ -3,6 +3,9 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def add
+  end
+
   def addDaily
     @post = Post.new(post_params)
     @post.save
