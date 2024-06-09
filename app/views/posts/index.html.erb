@@ -3,7 +3,7 @@
 <% @posts.reverse_each do |post|%>
     <div class = "daily
                   <% if post.qol == 0 %>    low
-                  <% elsif post.qol == 1 %> mediam
+                  <% elsif post.qol == 1 %> medium
                   <% elsif post.qol == 2 %> high
                   <% end %>">
         <form action= "/daily/<%= post.id %>" method = "POST">
@@ -11,12 +11,14 @@
             <h4>
             [
             <% if post.qol == 0 %>    Low
-            <% elsif post.qol == 1 %> Mediam
+            <% elsif post.qol == 1 %> Medium
             <% elsif post.qol == 2 %> High
             <% end %>
             ]
             <%= post.title %>
-            <button type="submit">DEL</button>
+            <button type="submit" class = "delete">
+                <img src="<%= asset_path('trash.png') %>" alt="Delete">
+            </button>
             </h4>
         </form>
         <p><%= post.body %></p>       

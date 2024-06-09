@@ -1,16 +1,16 @@
 .daily {
-    border: 1px solid rgba(195, 180, 180, 0.753);
     margin: 10px;
     margin-left: 10%;
     margin-right: 10%;
     padding: 1.5%;
 }
 
+/*QOLごとに日記のボックスの背景色を変更*/
 .daily.low {
     background-color: red;
 }
 
-.daily.mediam {
+.daily.medium {
     background-color: green;
 }
 
@@ -19,5 +19,16 @@
 }
 
 .daily h4{
-    margin: center;
+    text-align: center;
+}
+button.delete {
+    background: none; /* 背景色を削除 */
+    border: none; /* 境界線を削除 */
+    padding: 0; /* パディングを削除 */
+    margin: 0; /* マージンを削除 */
+}
+
+button.delete img {
+    width: 15px;
+    height: 15px;
 }
