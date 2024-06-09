@@ -7,20 +7,25 @@
 
 /*QOLごとに日記のボックスの背景色を変更*/
 .daily.low {
-    background-color: red;
+    background-color: #add8e6;
 }
 
 .daily.medium {
-    background-color: green;
+    background-color: #98fb98;
 }
 
 .daily.high {
-    background-color: blue;
+    background-color: #ffb8c1;
 }
 
-.daily h4{
+/*/////////////タイトル//////////*/
+.daily div.title{
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
+
 button.delete {
     background: none; /* 背景色を削除 */
     border: none; /* 境界線を削除 */
@@ -32,3 +37,21 @@ button.delete img {
     width: 15px;
     height: 15px;
 }
+
+button.delete img:hover {
+background-color: gray;
+}
+/*/////////////////////////////*/
+
+/*////////////////本文///////////////*/
+
+div.letter {
+    border: 3px solid #cccccc;
+    padding-left: 1%;
+    padding-right: 1%;
+    word-wrap: break-word;
+}
+
+
+/*///////////////////////////////////*/
+

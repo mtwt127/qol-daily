@@ -8,7 +8,7 @@
                   <% end %>">
         <form action= "/daily/<%= post.id %>" method = "POST">
             <input name="_method" type="hidden" value="DELETE">
-            <h4>
+            <div class="title">
             [
             <% if post.qol == 0 %>    Low
             <% elsif post.qol == 1 %> Medium
@@ -19,9 +19,9 @@
             <button type="submit" class = "delete">
                 <img src="<%= asset_path('trash.png') %>" alt="Delete">
             </button>
-            </h4>
+            </div>
         </form>
-        <p><%= post.body %></p>       
+        <div class = "letter"><%=simple_format(post.body) %></div>       
     </div>     
 
 <% end %>
