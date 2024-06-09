@@ -1,20 +1,35 @@
-<h3>日記一覧</h3>
+<h2 class="list">日記一覧</h2>
 
-<% @posts.each do |post|%>
-    <form action= "/daily/<%= post.id %>" method = "POST">
-        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-        <input name="_method" type="hidden" value="DELETE">
-        <h4>
-        <%= post.title %>
-        <button type="submit">DEL</button>
-        </h4>
-    </form>
-    <p><%= post.body %></p>
-    <p>
-        <% if post.qol == 0 %>    Low
-        <% elsif post.qol == 1 %> Mediam
-        <% elsif post.qol == 2 %> High
-        <% end %>
-    </p>            
-        
+<div class="explain_color">
+    low:
+    <span class="low">　</span>
+    medium:
+    <span class="medium">　</span>
+    high:
+    <span class="high">　</span>
+</div>
+
+<% @posts.reverse_each do |post|%>
+    <div class = "daily
+                  <% if post.qol == 0 %>    low
+                  <% elsif post.qol == 1 %> medium
+                  <% elsif post.qol == 2 %> high
+                  <% end %>">
+
+        <form action= "/daily/<%= post.id %>" method = "POST">
+            <input name="_method" type="hidden" value="DELETE">
+            <div class="title">
+                <%= post.title %>
+                <button type="submit" class = "delete">
+                    <img src="<%= asset_path('trash.png') %>" alt="Delete">
+                 </button>
+
+            </div>
+        </form>
+        <div class = "letter"><%=simple_format(post.body) %></div>    
+        <div class = "date">
+            <%= post.created_at.in_time_zone('Tokyo') %>
+        </div>   
+    </div>     
+
 <% end %>
