@@ -73,7 +73,7 @@ background-color: gray;
 
 /*////////////////本文///////////////*/
 
-div.letter {
+.daily div.letter {
     border: 3px solid #cccccc;
     padding-left: 1%;
     padding-right: 1%;
