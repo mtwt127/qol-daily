@@ -1,0 +1,95 @@
+.add > div > span.label{
+    display: inline-block;
+    background-color: #e2e0e0;
+    font-weight: bold;
+    width: 30%;
+  }
+
+/*タイトル部分*/
+.add >div.title{
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+}
+
+.add > div.title > span.label{
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.add > div.title > .form{
+    height: 85%;
+    width: 50%;
+    display: flex;
+}
+/*//////////////////////////*/
+
+/*本文部分*/
+.add >div.letter{
+    height: 200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+    
+}
+
+.add > div.letter > span.label{
+    height: 20%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.add > div.letter > .form{
+    height: 97%;
+    width: 50%;
+    display: flex;
+}
+/*///////////////////*/
+
+/*QOL部分*/
+.add >div.qol{
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+    margin-top: 0;
+}
+
+.add > div.qol > span.label{
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.add > div.qol > .form{
+    height: 85%;
+    width: 50%;
+    display: flex;
+    
+}
+/*//////////////*/
+
+.add > div.submit {
+    text-align: center;
+    height: 40px;
+}
+
+.add > div.submit > .form{
+    height: 100%;
+    width: 30%;
+    font-weight: bold;
+}
