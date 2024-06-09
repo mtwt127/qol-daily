@@ -1,0 +1,23 @@
+.daily {
+    border: 1px solid rgba(195, 180, 180, 0.753);
+    margin: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1.5%;
+}
+
+.daily.low {
+    background-color: red;
+}
+
+.daily.mediam {
+    background-color: green;
+}
+
+.daily.high {
+    background-color: blue;
+}
+
+.daily h4{
+    margin: center;
+}
