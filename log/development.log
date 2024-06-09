@@ -1962,3 +1962,35 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 3662)
 
 
+Started GET "/daily" for ::1 at 2024-06-09 18:09:03 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 77.6ms | Allocations: 48999)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 66447)
+Completed 200 OK in 117ms (Views: 92.3ms | ActiveRecord: 1.2ms | Allocations: 76547)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-09 18:09:04 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4184)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5543)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5954)
+
+
+Started GET "/daily" for ::1 at 2024-06-09 18:09:18 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2096)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5455)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 5770)
+
+
