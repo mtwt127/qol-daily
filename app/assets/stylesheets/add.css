@@ -12,6 +12,8 @@
     align-items: stretch;
     justify-content: center;
     margin: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .add > div.title > span.label{
@@ -37,6 +39,8 @@
     align-items: stretch;
     justify-content: center;
     margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     
 }
 

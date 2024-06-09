@@ -1,0 +1,28 @@
+Started GET "/daily/add" for ::1 at 2024-06-09 21:14:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4512)
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | Allocations: 62265)
+Completed 200 OK in 144ms (Views: 136.9ms | ActiveRecord: 0.0ms | Allocations: 66600)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-09 21:15:28 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 6551)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 6868)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-09 21:16:05 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1906)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6316)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6573)
+
+
