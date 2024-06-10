@@ -9,15 +9,9 @@ div.explain_color {
     text-align: center;
 }
 
-div.explain_color span.low{
-    background-color: #add8e6;
-} 
-div.explain_color span.medium{
-    background-color: #98fb98;
-} 
-div.explain_color span.high{
-    background-color: #ffb8c1;
-} 
+div.explain_color span.gradient{
+    background: linear-gradient(to right, #add8e6, #ffb8c1);
+}
 /*//////////////////////////*/
 
 
