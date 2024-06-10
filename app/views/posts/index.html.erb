@@ -7,11 +7,11 @@
 </div>
 
 <% @posts.reverse_each do |post|%>
-    <div class = "daily
-                  <% if post.qol == 0 %>    low
-                  <% elsif post.qol == 1 %> medium
-                  <% elsif post.qol == 2 %> high
-                  <% end %>">
+    <% color = calc_color(post.qol) %>
+    <%= color%>
+    <%= post.qol%>
+    <div class = "daily"
+                style="background-color: <%= color %>;">
 
         <form action= "/daily/<%= post.id %>" method = "POST">
             <input name="_method" type="hidden" value="DELETE">

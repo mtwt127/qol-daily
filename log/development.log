@@ -196,3 +196,434 @@ Processing by PostsController#index as TURBO_STREAM
 Completed 200 OK in 49ms (Views: 31.1ms | ActiveRecord: 0.2ms | Allocations: 7130)
 
 
+Started GET "/daily" for ::1 at 2024-06-10 11:42:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 512.1ms | Allocations: 53619)
+  Rendered layout layouts/application.html.erb (Duration: 564.9ms | Allocations: 71012)
+Completed 200 OK in 684ms (Views: 572.4ms | ActiveRecord: 7.6ms | Allocations: 81114)
+
+
+Started DELETE "/daily/21" for ::1 at 2024-06-10 11:42:20 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (1.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 27ms (ActiveRecord: 5.8ms | Allocations: 4955)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:20 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2974)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4432)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 4804)
+
+
+Started DELETE "/daily/20" for ::1 at 2024-06-10 11:42:21 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (6.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms | Allocations: 2492)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:21 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2417)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3772)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms | Allocations: 4043)
+
+
+Started DELETE "/daily/19" for ::1 at 2024-06-10 11:42:22 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (2.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms | Allocations: 2475)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:22 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2043)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3401)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 3671)
+
+
+Started DELETE "/daily/17" for ::1 at 2024-06-10 11:42:23 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (1.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms | Allocations: 2469)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:23 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1658)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3019)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 3289)
+
+
+Started DELETE "/daily/16" for ::1 at 2024-06-10 11:42:24 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (1.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 19ms (ActiveRecord: 2.4ms | Allocations: 2485)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:24 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1272)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2638)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.1ms | Allocations: 2906)
+
+
+Started DELETE "/daily/22" for ::1 at 2024-06-10 11:42:25 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"22"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (5.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 20ms (ActiveRecord: 6.3ms | Allocations: 2447)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:42:25 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 568)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2034)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 2302)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:09:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 17492)
+Completed 200 OK in 91ms (Views: 76.8ms | ActiveRecord: 10.7ms | Allocations: 19281)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 12:09:56 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3231)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 4653)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 5008)
+
+
+Started POST "/daily/add" for ::1 at 2024-06-10 12:10:04 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"あ", "body"=>"aあ", "qol"=>"100", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f8c43aa75b8>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"あ", "body"=>"aあ", "qol"=>"100", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "あ"], ["body", "aあ"], ["qol", 100], ["created_at", "2024-06-10 03:10:04.376409"], ["updated_at", "2024-06-10 03:10:04.376409"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 46ms (ActiveRecord: 10.7ms | Allocations: 6109)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:10:04 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1409)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 2764)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 4.5ms | Allocations: 3107)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:12:28 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.3ms | Allocations: 5142)
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | Allocations: 24429)
+Completed 200 OK in 112ms (Views: 104.2ms | ActiveRecord: 4.0ms | Allocations: 26217)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:13:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 5115)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 21047)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 1.3ms | Allocations: 22830)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:14:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 5196)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 21227)
+Completed 200 OK in 50ms (Views: 42.0ms | ActiveRecord: 1.5ms | Allocations: 23016)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:14:27 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 5115)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 21124)
+Completed 200 OK in 72ms (Views: 61.9ms | ActiveRecord: 6.9ms | Allocations: 22912)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:15:50 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 38.4ms | Allocations: 5156)
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 21169)
+Completed 200 OK in 102ms (Views: 82.3ms | ActiveRecord: 7.9ms | Allocations: 22958)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:16:26 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 5137)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 21159)
+Completed 200 OK in 68ms (Views: 51.5ms | ActiveRecord: 10.4ms | Allocations: 22948)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:16:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 5133)
+  Rendered layout layouts/application.html.erb (Duration: 90.1ms | Allocations: 21189)
+Completed 200 OK in 106ms (Views: 92.8ms | ActiveRecord: 5.3ms | Allocations: 22978)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:16:56 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 5197)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 21227)
+Completed 200 OK in 74ms (Views: 67.8ms | ActiveRecord: 2.4ms | Allocations: 23017)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 12:18:02 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2686)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 18671)
+Completed 200 OK in 70ms (Views: 64.1ms | ActiveRecord: 0.0ms | Allocations: 19753)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:18:03 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 5132)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 6603)
+Completed 200 OK in 57ms (Views: 45.2ms | ActiveRecord: 3.6ms | Allocations: 7727)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:18:42 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 5150)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 21174)
+Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 2.8ms | Allocations: 22964)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:19:07 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 5149)
+  Rendered layout layouts/application.html.erb (Duration: 90.1ms | Allocations: 21205)
+Completed 200 OK in 106ms (Views: 94.0ms | ActiveRecord: 3.3ms | Allocations: 22993)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:19:21 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 5211)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 21226)
+Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 5.5ms | Allocations: 23016)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 12:19:27 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2639)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3921)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 4249)
+
+
+Started POST "/daily/add" for ::1 at 2024-06-10 12:19:34 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"ｄ", "body"=>"ｄｄ", "qol"=>"0", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f8c40d6d958>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"ｄ", "body"=>"ｄｄ", "qol"=>"0", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (6.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "ｄ"], ["body", "ｄｄ"], ["qol", 0], ["created_at", "2024-06-10 03:19:34.485311"], ["updated_at", "2024-06-10 03:19:34.485311"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 37ms (ActiveRecord: 17.8ms | Allocations: 2641)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:19:34 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1683)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3038)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 3353)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 12:19:35 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1876)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3158)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 3411)
+
+
+Started POST "/daily/add" for ::1 at 2024-06-10 12:19:39 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"dd", "body"=>"dd", "qol"=>"50", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007f8c43fa1758>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"dd", "body"=>"dd", "qol"=>"50", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (2.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "dd"], ["body", "dd"], ["qol", 50], ["created_at", "2024-06-10 03:19:39.758101"], ["updated_at", "2024-06-10 03:19:39.758101"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 21ms (ActiveRecord: 3.1ms | Allocations: 2408)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 12:19:39 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2075)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 3433)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms | Allocations: 3702)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 12:20:03 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1879)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3166)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 3419)
+
+

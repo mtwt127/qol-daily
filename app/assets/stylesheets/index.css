@@ -22,20 +22,7 @@ div.explain_color span.gradient{
     margin-right: 10%;
     padding: 1.5%;
 }
-/*QOLごとに日記のボックスの背景色を変更*/
-.daily.low {
-    background-color: #add8e6;
-}
 
-.daily.medium {
-    background-color: #98fb98;
-}
-
-.daily.high {
-    background-color: #ffb8c1;
-}
-
-/*/////////////タイトル//////////*/
 .daily div.title{
     text-align: center;
     font-size: 20px;
