@@ -26,3 +26,173 @@ Processing by PostsController#add as HTML
 Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6573)
 
 
+Started GET "/daily" for ::1 at 2024-06-10 11:13:39 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12:in `reverse_each'
+Started GET "/daily/add" for ::1 at 2024-06-10 11:13:40 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 44.0ms | Allocations: 4501)
+  Rendered posts/index.html.erb within layouts/application (Duration: 681.8ms | Allocations: 79541)
+  Rendered layout layouts/application.html.erb (Duration: 737.8ms | Allocations: 95670)
+Completed 200 OK in 796ms (Views: 739.7ms | ActiveRecord: 1.7ms | Allocations: 105764)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 428.7ms | Allocations: 75370)
+Completed 200 OK in 432ms (Views: 430.1ms | ActiveRecord: 0.0ms | Allocations: 75824)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:13:49 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1997)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3350)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 3651)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:14:11 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2638)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 18512)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 19595)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:14:25 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 25.6ms | Allocations: 2710)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 18671)
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms | Allocations: 19747)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:15:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4511)
+  Rendered layout layouts/application.html.erb (Duration: 163.1ms | Allocations: 40058)
+Completed 200 OK in 210ms (Views: 197.4ms | ActiveRecord: 0.0ms | Allocations: 44394)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:15:29 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2036)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3431)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 3751)
+
+
+Started GET "/daily/add" for ::1 at 2024-06-10 11:15:55 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1558)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1663)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2756)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>日記投稿</h2>
+
+<%= form_with model: @post do |form| %>
+<div class="add">
+    <div class="title">
+      <span class = "label">
+        タイトル
+      </span>
+      <%= form.text_field :title, class: "form"%>
+    </div>
+    <div class="letter">
+      <span class="label">
+        本文
+      </span>
+      <%= form.text_area :body, class: "form"%>
+    </div>
+    <div class = "qol">
+      <span class="label">
+        QOL
+      </span>
+      <%= form.number_field :qol,min: 0 ,max: 100step: 1, class: "form" %>
+    </div>
+  <div class = "submit">
+      <%= form.submit "投稿", class: "form"%>  
+  </div>
+</div>
+
+<% end %>
+):
+1:    <h2>日記投稿</h2>
+2:    
+3:    <%= form_with model: @post do |form| %>
+4:    <div class="add">
+5:        <div class="title">
+6:          <span class = "label">
+7:            タイトル
+8:          </span>
+9:          <%= form.text_field :title, class: "form"%>
+10:        </div>
+11:        <div class="letter">
+12:          <span class="label">
+13:            本文
+14:          </span>
+15:          <%= form.text_area :body, class: "form"%>
+16:        </div>
+17:        <div class = "qol">
+18:          <span class="label">
+19:            QOL
+20:          </span>
+21:          <%= form.number_field :qol,min: 0 ,max: 100step: 1, class: "form" %>
+22:        </div>
+23:      <div class = "submit">
+24:          <%= form.submit "投稿", class: "form"%>  
+25:      </div>
+26:    </div>
+27:    
+28:    <% end %>
+  
+app/views/posts/add.html.erb:21: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/daily/add" for ::1 at 2024-06-10 11:16:02 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2733)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 18705)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms | Allocations: 19785)
+
+
+Started POST "/daily/add" for ::1 at 2024-06-10 11:16:13 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"aaa", "body"=>"aaa", "qol"=>"43", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007efdaf00a060>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"aaa", "body"=>"aaa", "qol"=>"43", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "aaa"], ["body", "aaa"], ["qol", 43], ["created_at", "2024-06-10 02:16:14.007549"], ["updated_at", "2024-06-10 02:16:14.007549"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 165ms (ActiveRecord: 17.4ms | Allocations: 19355)
+
+
+Started GET "/daily" for ::1 at 2024-06-10 11:16:14 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:12:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 4028)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 5510)
+Completed 200 OK in 49ms (Views: 31.1ms | ActiveRecord: 0.2ms | Allocations: 7130)
+
+
