@@ -8,8 +8,6 @@
 
 <% @posts.reverse_each do |post|%>
     <% color = calc_color(post.qol) %>
-    <%= color%>
-    <%= post.qol%>
     <div class = "daily"
                 style="background-color: <%= color %>;">
 
