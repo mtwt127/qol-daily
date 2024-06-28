@@ -9,7 +9,7 @@
 <% @posts.reverse_each do |post|%>
     <% color = calc_color(post.qol) %>
     <div class = "daily"
-                style="background-color: <%= color %>;">
+        style="background-color: <%= color %>;">
 
         <form action= "/daily/<%= post.id %>" method = "POST">
             <input name="_method" type="hidden" value="DELETE">
