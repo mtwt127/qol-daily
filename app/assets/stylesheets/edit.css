@@ -1,0 +1,99 @@
+.edit > div > span.label{
+    display: inline-block;
+    background-color: #e2e0e0;
+    font-weight: bold;
+    width: 30%;
+  }
+
+/*タイトル部分*/
+.edit >div.title{
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.edit > div.title > span.label{
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.edit > div.title > .form{
+    height: 85%;
+    width: 50%;
+    display: flex;
+}
+/*//////////////////////////*/
+
+/*本文部分*/
+.edit >div.letter{
+    height: 200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.edit > div.letter > span.label{
+    height: 20%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.edit > div.letter > .form{
+    height: 97%;
+    width: 50%;
+    display: flex;
+}
+/*///////////////////*/
+
+/*QOL部分*/
+.edit >div.qol{
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 5%;
+    margin-top: 0;
+}
+
+.edit > div.qol > span.label{
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直方向のセンタリング */
+    justify-content: center;
+    margin-right: 10px;
+    
+}
+
+.edit > div.qol > .form{
+    height: 85%;
+    width: 50%;
+    display: flex;
+    
+}
+/*//////////////*/
+
+.edit > div.submit {
+    text-align: center;
+    height: 40px;
+}
+
+.edit > div.submit > .form{
+    height: 100%;
+    width: 30%;
+    font-weight: bold;
+}
