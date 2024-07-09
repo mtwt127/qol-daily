@@ -30,24 +30,27 @@ div.explain_color span.gradient{
     margin-bottom: 10px;
 }
 
+.daily form{
+    display: inline;
+}
 .daily div.date{
     text-align: right;
     font-size: 10px;
 }
 
-button.delete {
+button {
     background: none; /* 背景色を削除 */
     border: none; /* 境界線を削除 */
     padding: 0; /* パディングを削除 */
     margin: 0; /* マージンを削除 */
 }
 
-button.delete img {
+button img {
     width: 15px;
     height: 15px;
 }
 
-button.delete img:hover {
+button img:hover {
 background-color: gray;
 }
 /*/////////////////////////////*/

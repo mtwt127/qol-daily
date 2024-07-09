@@ -12,6 +12,16 @@ class PostsController < ApplicationController
     redirect_to '/daily'
   end
 
+  def edit
+  end
+
+  def editDaily
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to '/daily'
+
+  end
+
   def deleteDaily
     post = Post.find(params[:id])
     post.destroy

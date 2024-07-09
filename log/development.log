@@ -176,3 +176,1621 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 4083)
 
 
+Started GET "/daily" for ::1 at 2024-07-09 11:02:50 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 293.0ms | Allocations: 47017)
+  Rendered layout layouts/application.html.erb (Duration: 326.2ms | Allocations: 63305)
+Completed 200 OK in 424ms (Views: 330.1ms | ActiveRecord: 3.1ms | Allocations: 73392)
+
+
+Started DELETE "/daily/24" for ::1 at 2024-07-09 11:02:57 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"24"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mPost Destroy (1.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 13ms (ActiveRecord: 4.3ms | Allocations: 5914)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:02:57 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2251)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3709)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4080)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 11:02:59 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3234)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4653)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 5017)
+
+
+Started POST "/daily/add" for ::1 at 2024-07-09 11:03:05 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"sadf", "body"=>"sadf", "qol"=>"23", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007ff26dc4a358>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"sadf", "body"=>"sadf", "qol"=>"23", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "sadf"], ["body", "sadf"], ["qol", 23], ["created_at", "2024-07-09 02:03:05.230642"], ["updated_at", "2024-07-09 02:03:05.230642"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms | Allocations: 3615)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:03:05 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3898)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4199)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:03:41 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2465)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3814)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4079)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 11:03:42 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1884)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3166)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 3424)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 11:10:45 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2634)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 22631)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 23712)
+
+
+Started GET "/daily/:25" for ::1 at 2024-07-09 11:10:53 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/:25"):
+  
+Started GET "/daily" for ::1 at 2024-07-09 11:19:53 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 5898)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 22020)
+Completed 200 OK in 51ms (Views: 41.4ms | ActiveRecord: 6.0ms | Allocations: 23810)
+
+
+Started DELETE "/daily/27" for ::1 at 2024-07-09 11:19:55 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"27"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:26:in `deleteDaily'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mPost Destroy (0.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 8ms (ActiveRecord: 4.2ms | Allocations: 3292)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:19:55 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3515)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3842)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 11:19:58 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2575)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3920)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4231)
+
+
+Started POST "/daily/add" for ::1 at 2024-07-09 11:20:04 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"aasdf", "body"=>"asdfasdf", "qol"=>"1", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007ff26de770e0>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"aasdf", "body"=>"asdfasdf", "qol"=>"1", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "aasdf"], ["body", "asdfasdf"], ["qol", 1], ["created_at", "2024-07-09 02:20:04.572540"], ["updated_at", "2024-07-09 02:20:04.572540"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms | Allocations: 2540)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:20:04 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2484)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3893)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4161)
+
+
+Started POST "/daily/add" for ::1 at 2024-07-09 11:20:04 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"aasdf", "body"=>"asdfasdf", "qol"=>"1", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007ff26cf867e8>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"aasdf", "body"=>"asdfasdf", "qol"=>"1", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "aasdf"], ["body", "asdfasdf"], ["qol", 1], ["created_at", "2024-07-09 02:20:04.650855"], ["updated_at", "2024-07-09 02:20:04.650855"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms | Allocations: 2408)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:20:04 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2871)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 4274)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4542)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:21:53 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 53.6ms | Allocations: 32889)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 49006)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 1.5ms | Allocations: 50794)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:22:33 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 4151)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 9136)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms | Allocations: 9421)
+
+
+Started DELETE "/daily/28" for ::1 at 2024-07-09 11:23:11 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"28"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:26:in `deleteDaily'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 8ms (ActiveRecord: 4.3ms | Allocations: 3289)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:23:11 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3544)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4962)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 5275)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:24:49 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 7412)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 23552)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.5ms | Allocations: 25340)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:24:50 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 2.5ms | Allocations: 2567)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3909)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4236)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:24:52 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 1.3ms | Allocations: 1885)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3227)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3479)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:35:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 6912)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 23045)
+Completed 200 OK in 58ms (Views: 51.0ms | ActiveRecord: 3.2ms | Allocations: 24836)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:35:21 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 3.0ms | Allocations: 2584)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3929)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4255)
+
+
+Started POST "/daily/edit" for ::1 at 2024-07-09 11:35:28 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/daily/edit"):
+  
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:35:29 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 1.4ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3255)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3504)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:35:30 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3545)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4948)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 5217)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:37:05 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 7453)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 23567)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 1.8ms | Allocations: 25355)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:37:07 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 1.9ms | Allocations: 2593)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3935)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 4261)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:37:07 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 1.0ms | Allocations: 1882)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3224)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3475)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:38:49 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 7391)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 23508)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 1.0ms | Allocations: 25297)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:38:50 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 1.6ms | Allocations: 2595)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3937)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4263)
+
+
+Started POST "/daily/edit" for ::1 at 2024-07-09 11:38:52 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/daily/edit"):
+  
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:38:52 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 3.1ms | Allocations: 1869)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3239)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3489)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:42:11 +0900
+Processing by PostsController#edit as HTML
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms | Allocations: 1841)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily" for ::1 at 2024-07-09 11:42:21 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 6938)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 23067)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.3ms | Allocations: 24029)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:42:22 +0900
+Processing by PostsController#edit as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 551)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily" for ::1 at 2024-07-09 11:44:00 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 7449)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 23563)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 1.2ms | Allocations: 25347)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:44:01 +0900
+Processing by PostsController#edit as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 572)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:44:01 +0900
+Processing by PostsController#edit as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 528)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily" for ::1 at 2024-07-09 11:44:07 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3545)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4957)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 5234)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:51:30 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 6961)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 23069)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 1.3ms | Allocations: 24854)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:51:31 +0900
+Processing by PostsController#edit as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 572)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily" for ::1 at 2024-07-09 11:57:20 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 6971)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 23095)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 1.0ms | Allocations: 24884)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:57:22 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 2.8ms | Allocations: 2625)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3967)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4293)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 11:57:40 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 7385)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 23491)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.2ms | Allocations: 25280)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 11:57:42 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 3.1ms | Allocations: 2632)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3974)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4301)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 12:00:03 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 7451)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 23565)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.9ms | Allocations: 25356)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 12:00:04 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 7.7ms | Allocations: 2645)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3995)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 4322)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 12:00:05 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5113)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5196)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 5566)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<ActionView::Base:0x0000000003a548>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+    1: <h2>日記投稿</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: <div class="add">
+    5:     <div class="title">
+    6:       <span class = "label">
+  
+app/views/posts/add.html.erb:3
+Started GET "/daily/add" for ::1 at 2024-07-09 12:01:24 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2729)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 18798)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 19874)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 12:06:40 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 7454)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 23571)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.9ms | Allocations: 25361)
+
+
+Started GET "/daily/:id" for ::1 at 2024-07-09 12:06:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/:id"):
+  
+Started GET "/daily/:id" for ::1 at 2024-07-09 12:06:59 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 3.2ms | Allocations: 2839)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 18941)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 20014)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 12:18:09 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 9971)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 10058)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 8.3ms | Allocations: 11816)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x00000000048e40>
+
+                    <button type="submit" class = "edit" onclick = "'.freeze; @output_buffer.append=( form.hidden_field :id, value: @post.id ); @output_buffer.safe_append='">
+                                                                                                      ^^^^
+Did you mean?  for
+               fork):
+    20:                 </button>
+    21: 
+    22:                 <a href="/daily/edit">
+    23:                     <button type="submit" class = "edit" onclick = "<%= form.hidden_field :id, value: @post.id %>">
+    24:                       <img src="<%= asset_path('pencil.png') %>" alt="Edit">
+    25:                     </button>
+    26:                 </a>
+  
+app/views/posts/index.html.erb:23
+app/views/posts/index.html.erb:9:in `reverse_each'
+app/views/posts/index.html.erb:9
+Started GET "/daily" for ::1 at 2024-07-09 12:18:37 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7067)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7154)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms | Allocations: 8907)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass
+
+                    <button type="submit" class = "edit" onclick = "'.freeze; @output_buffer.append=( post.hidden_field :id, value: @post.id ); @output_buffer.safe_append='">
+                                                                                                                                         ^^^):
+    20:                 </button>
+    21: 
+    22:                 <a href="/daily/edit">
+    23:                     <button type="submit" class = "edit" onclick = "<%= post.hidden_field :id, value: @post.id %>">
+    24:                       <img src="<%= asset_path('pencil.png') %>" alt="Edit">
+    25:                     </button>
+    26:                 </a>
+  
+app/views/posts/index.html.erb:23
+app/views/posts/index.html.erb:9:in `reverse_each'
+app/views/posts/index.html.erb:9
+Started GET "/daily" for ::1 at 2024-07-09 14:30:48 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (32.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 184.9ms | Allocations: 7001)
+  Rendered layout layouts/application.html.erb (Duration: 647.3ms | Allocations: 23119)
+Completed 200 OK in 719ms (Views: 615.1ms | ActiveRecord: 49.2ms | Allocations: 24905)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:30:54 +0900
+Processing by PostsController#edit as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 58.2ms | Allocations: 4980)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 5063)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 1.3ms | Allocations: 6593)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x000000000507a8>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:32:32 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 9.4ms | Allocations: 2780)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 18849)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 19921)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:32:34 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 7447)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8990)
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 6.0ms | Allocations: 10115)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:32:37 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 9.6ms | Allocations: 4833)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4916)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5163)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000054538>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: $edit_post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/" for ::1 at 2024-07-09 14:33:26 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 58.7ms | Allocations: 7477)
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 23606)
+Completed 200 OK in 98ms (Views: 72.0ms | ActiveRecord: 18.9ms | Allocations: 25391)
+
+
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:33:29 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 10.7ms | Allocations: 5062)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5145)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 5471)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x000000000582a0>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: $edit_post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:33:31 +0900
+Processing by PostsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 9.7ms | Allocations: 4775)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4858)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5090)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000058598>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: $edit_post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/edit" for ::1 at 2024-07-09 14:42:12 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mPost Load (10.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+Completed 404 Not Found in 20ms (ActiveRecord: 17.5ms | Allocations: 2840)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=edit):
+  
+app/controllers/posts_controller.rb:16:in `edit'
+Started GET "/daily" for ::1 at 2024-07-09 14:42:13 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 18524)
+  Rendered layout layouts/application.html.erb (Duration: 127.1ms | Allocations: 78811)
+Completed 200 OK in 142ms (Views: 130.6ms | ActiveRecord: 9.3ms | Allocations: 85698)
+
+
+Started GET "/daily/" for ::1 at 2024-07-09 14:42:14 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3571)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4998)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.0ms | Allocations: 5283)
+
+
+Started DELETE "/daily/25" for ::1 at 2024-07-09 14:42:22 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+  [1m[36mPost Destroy (3.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 15ms (ActiveRecord: 8.1ms | Allocations: 2600)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:42:22 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2926)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4348)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 4659)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:46:57 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 6818)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 22852)
+Completed 200 OK in 65ms (Views: 52.0ms | ActiveRecord: 8.0ms | Allocations: 24637)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:48:01 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 6822)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 26584)
+Completed 200 OK in 85ms (Views: 79.5ms | ActiveRecord: 3.2ms | Allocations: 28372)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:10 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2934)
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 7936)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.1ms | Allocations: 8221)
+
+
+Started PATCH "/daily/23" for ::1 at 2024-07-09 14:49:19 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24e211e00>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"23"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 1936)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:19 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2937)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4349)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 4662)
+
+
+Started PATCH "/daily/23" for ::1 at 2024-07-09 14:49:21 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24e192830>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"23"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1077)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:21 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2932)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4350)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 4618)
+
+
+Started PATCH "/daily/23" for ::1 at 2024-07-09 14:49:22 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24e11c838>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"23"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:22 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2932)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4350)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 4618)
+
+
+Started DELETE "/daily/23" for ::1 at 2024-07-09 14:49:35 +0900
+Processing by PostsController#deleteDaily as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `deleteDaily'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+  [1m[36mPost Destroy (0.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `deleteDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 2491)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:35 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2320)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3744)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 4012)
+
+
+Started GET "/daily/add" for ::1 at 2024-07-09 14:49:37 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2692)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4034)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4344)
+
+
+Started POST "/daily/add" for ::1 at 2024-07-09 14:49:44 +0900
+Processing by PostsController#addDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"うぇｒとぇｒｔ", "body"=>"うぇｒとぇｒｔ", "qol"=>"32", "commit"=>"投稿"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: PostsController, action: addDaily, request: #<ActionDispatch::Request:0x00007ff24e0250d8>, params: {"authenticity_token"=>"[FILTERED]", "title"=>"うぇｒとぇｒｔ", "body"=>"うぇｒとぇｒｔ", "qol"=>"32", "commit"=>"投稿", "controller"=>"posts", "action"=>"addDaily"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mPost Create (4.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "qol", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "うぇｒとぇｒｔ"], ["body", "うぇｒとぇｒｔ"], ["qol", 32], ["created_at", "2024-07-09 05:49:44.792958"], ["updated_at", "2024-07-09 05:49:44.792958"]]
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:11:in `addDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 11ms (ActiveRecord: 4.4ms | Allocations: 2507)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:49:44 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2934)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4355)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 4623)
+
+
+Started PATCH "/daily/26" for ::1 at 2024-07-09 14:52:16 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24df93188>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"26"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1043)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:52:16 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2934)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4352)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4620)
+
+
+Started PATCH "/daily/26" for ::1 at 2024-07-09 14:52:23 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24df00838>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"26"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1049)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:52:23 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2934)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4349)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 4617)
+
+
+Started PATCH "/daily/26" for ::1 at 2024-07-09 14:53:41 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+[31mUnpermitted parameters: :_method, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007ff24dd462e0>, params: {"_method"=>"PATCH", "controller"=>"posts", "action"=>"editDaily", "id"=>"26"} }[0m
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 27ms (ActiveRecord: 2.0ms | Allocations: 5992)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 14:53:41 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 3614)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | Allocations: 19769)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.2ms | Allocations: 20858)
+
+
+Started GET "/daily/26" for ::1 at 2024-07-09 14:54:32 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 18.9ms | Allocations: 4995)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5084)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.6ms | Allocations: 11276)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000006b580>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 14:56:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 6862)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 22988)
+Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 2.4ms | Allocations: 24781)
+
+
+Started GET "/daily/26/edit" for ::1 at 2024-07-09 14:56:46 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 15.0ms | Allocations: 4971)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5054)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms | Allocations: 6590)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000006f478>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/29/edit" for ::1 at 2024-07-09 14:56:47 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 14.6ms | Allocations: 5538)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6820)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.6ms | Allocations: 9782)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000006f540>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/29/edit" for ::1 at 2024-07-09 14:56:48 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 9.9ms | Allocations: 4766)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4849)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 5594)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000006fa68>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 15:01:57 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 6861)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 22982)
+Completed 200 OK in 80ms (Views: 61.6ms | ActiveRecord: 2.8ms | Allocations: 24770)
+
+
+Started GET "/daily/29/edit" for ::1 at 2024-07-09 15:02:11 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 10.7ms | Allocations: 4784)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4867)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 6403)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000073910>
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post, url: post_path(@post), method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 15:02:21 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2941)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4356)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 4620)
+
+
+Started GET "/daily/26/edit" for ::1 at 2024-07-09 15:04:10 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 13.8ms | Allocations: 4809)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4898)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 4.4ms | Allocations: 11147)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000077740>
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post, url: post_path(@post), method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/29/edit" for ::1 at 2024-07-09 15:04:12 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 22.9ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4676)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms | Allocations: 5504)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000077a88>
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post, url: post_path(@post), method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/26/edit" for ::1 at 2024-07-09 15:04:15 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 10.1ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4676)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 5421)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000077d80>
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post, url: post_path(@post), method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/30/edit" for ::1 at 2024-07-09 15:05:35 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 9.0ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4676)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 5421)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000078050>
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post, url: post_path(@post), method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 15:17:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 288.2ms | Allocations: 56801)
+  Rendered layout layouts/application.html.erb (Duration: 338.3ms | Allocations: 74322)
+Completed 200 OK in 411ms (Views: 342.7ms | ActiveRecord: 1.1ms | Allocations: 84424)
+
+
+Started GET "/daily/26/edit" for ::1 at 2024-07-09 15:17:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/26/edit"):
+  
+Started GET "/daily/29/edit" for ::1 at 2024-07-09 15:17:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/daily/29/edit"):
+  
+Started GET "/daily" for ::1 at 2024-07-09 15:17:35 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6876)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 23001)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 1.4ms | Allocations: 24792)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:17:36 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 13.0ms | Allocations: 5103)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5188)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 8063)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000000ee70>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/29" for ::1 at 2024-07-09 15:17:38 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 8.2ms | Allocations: 4768)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4851)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 5622)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000000f190>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 15:24:28 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (8.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 121.0ms | Allocations: 6378)
+  Rendered layout layouts/application.html.erb (Duration: 238.2ms | Allocations: 22503)
+Completed 200 OK in 267ms (Views: 233.3ms | ActiveRecord: 10.7ms | Allocations: 24288)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:24:30 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:16:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 41.4ms | Allocations: 4970)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 5053)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.1ms | Allocations: 6589)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000012bd8>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^
+Did you mean?  font_path):
+    1: <h2>日記編集</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+    4: 
+    5: <h1><%= form.id%></h1>
+    6: <div class="edit">
+  
+app/views/posts/edit.erb:3
+Started GET "/daily/add" for ::1 at 2024-07-09 15:24:31 +0900
+Processing by PostsController#add as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/add.html.erb within layouts/application
+  Rendered posts/add.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4981)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 5064)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 5452)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<ActionView::Base:0x00000000012ef8>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+    1: <h2>日記投稿</h2>
+    2: 
+    3: <%= form_with model: @post do |form| %>
+    4: <div class="add">
+    5:     <div class="title">
+    6:       <span class = "label">
+  
+app/views/posts/add.html.erb:3
+Started GET "/daily" for ::1 at 2024-07-09 15:24:36 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2945)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4372)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 4636)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:26:09 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 15.0ms | Allocations: 3133)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 19246)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 20321)
+
+
+Started POST "/daily/30" for ::1 at 2024-07-09 15:26:18 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/daily/30"):
+  
+Started GET "/daily/30" for ::1 at 2024-07-09 15:26:19 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 2.8ms | Allocations: 1949)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3406)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3693)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 15:27:27 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 6868)
+  Rendered layout layouts/application.html.erb (Duration: 62.7ms | Allocations: 22994)
+Completed 200 OK in 68ms (Views: 62.0ms | ActiveRecord: 2.9ms | Allocations: 24794)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:27:28 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 4.5ms | Allocations: 2643)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3985)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 4311)
+
+
+Started PATCH "/daily/30" for ::1 at 2024-07-09 15:27:34 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"asd", "body"=>"asd", "qol"=>"1", "commit"=>"投稿", "id"=>"30"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:19:in `editDaily'
+[31mUnpermitted parameters: :_method, :authenticity_token, :commit, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007fc5fbe7f3d8>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "title"=>"asd", "body"=>"asd", "qol"=>"1", "commit"=>"投稿", "controller"=>"posts", "action"=>"editDaily", "id"=>"30"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+  [1m[36mPost Update (8.6ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "body" = ?, "qol" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "asd"], ["body", "asd"], ["qol", 1], ["updated_at", "2024-07-09 06:27:34.075346"], ["id", 30]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 57ms (ActiveRecord: 11.5ms | Allocations: 5027)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 15:27:34 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2932)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4323)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms | Allocations: 4638)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:28:58 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 23.4ms | Allocations: 2728)
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 18797)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 19876)
+
+
+Started PATCH "/daily/30" for ::1 at 2024-07-09 15:29:06 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"dsa", "body"=>"dsa", "qol"=>"2", "commit"=>"投稿", "id"=>"30"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:19:in `editDaily'
+Completed 400 Bad Request in 12ms (ActiveRecord: 1.7ms | Allocations: 6034)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:33:in `post_params'
+app/controllers/posts_controller.rb:20:in `editDaily'
+Started GET "/daily/30" for ::1 at 2024-07-09 15:29:06 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 5.7ms | Allocations: 2037)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3492)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 3776)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 15:29:14 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3320)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4723)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5047)
+
+
+Started GET "/daily/30" for ::1 at 2024-07-09 15:29:24 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.erb within layouts/application
+  Rendered posts/edit.erb within layouts/application (Duration: 4.7ms | Allocations: 2804)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 18871)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 19951)
+
+
+Started PATCH "/daily/30" for ::1 at 2024-07-09 15:29:30 +0900
+Processing by PostsController#editDaily as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "title"=>"dsa", "body"=>"dsa", "qol"=>"100", "commit"=>"投稿", "id"=>"30"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:19:in `editDaily'
+[31mUnpermitted parameters: :_method, :authenticity_token, :commit, :id. Context: { controller: PostsController, action: editDaily, request: #<ActionDispatch::Request:0x00007fc5fbf560b8>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "title"=>"dsa", "body"=>"dsa", "qol"=>"100", "commit"=>"投稿", "controller"=>"posts", "action"=>"editDaily", "id"=>"30"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+  [1m[36mPost Update (10.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "body" = ?, "qol" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "dsa"], ["body", "dsa"], ["qol", 100], ["updated_at", "2024-07-09 06:29:30.761054"], ["id", 30]]
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `editDaily'
+Redirected to http://localhost:3000/daily
+Completed 302 Found in 41ms (ActiveRecord: 12.5ms | Allocations: 10792)
+
+
+Started GET "/daily" for ::1 at 2024-07-09 15:29:30 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:9:in `reverse_each'
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 3467)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 4992)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 5435)
+
+

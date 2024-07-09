@@ -11,15 +11,21 @@
     <div class = "daily"
         style="background-color: <%= color %>;">
 
-        <form action= "/daily/<%= post.id %>" method = "POST">
-            <input name="_method" type="hidden" value="DELETE">
-            <div class="title">
-                <%= post.title %>
+        
+       <div class="title">
+            <%= post.title %>
+            <form action= "/daily/<%= post.id %>" method = "POST">
+                <input name="_method" type="hidden" value="DELETE">
                 <button type="submit" class = "delete">
                     <img src="<%= asset_path('trash.png') %>" alt="Delete">
-                 </button>
-
-            </div>
+                </button>
+            </form>
+            <a href = "/daily/<%= post.id%>">
+                <button type="submit" class = "edit">
+                    <img src="<%= asset_path('pencil.png') %>" alt="Edit">
+                </button>
+            </a>
+        </div>
         </form>
         <div class = "letter"><%=simple_format(post.body) %></div>    
         <div class = "date">

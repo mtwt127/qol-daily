@@ -1,0 +1,30 @@
+<h2>日記編集</h2>
+
+<%= form_with model: @post,method: :patch do |form| %> <!--@postが空であれば、自動でcreate, 中身があればupdate-->
+
+<h1><%= form.id%></h1>
+<div class="edit">
+  <div class="title">
+    <span class = "label">
+      タイトル
+    </span>
+    <%= form.text_field :title, class: "form"%>
+  </div>
+  <div class="letter">
+    <span class="label">
+      本文
+    </span>
+    <%= form.text_area :body, class: "form"%>
+  </div>
+  <div class = "qol">
+    <span class="label">
+      QOL
+    </span>
+    <%= form.number_field :qol,min: 0 ,max: 100,step: 1, class: "form" %>
+  </div>
+  <div class = "submit">
+      <%= form.submit "投稿", class: "form"%>  
+  </div>
+</div>
+
+<% end %>

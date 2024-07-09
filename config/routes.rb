@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/daily/add', to: "posts#add"
   post '/daily/add', to: "posts#addDaily"
 
+  get '/daily/:id', to: "posts#edit"
+  patch '/daily/:id', to: "posts#editDaily"
   delete '/daily/:id', to: "posts#deleteDaily"
 end
