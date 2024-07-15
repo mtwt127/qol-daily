@@ -5,14 +5,14 @@ QOL-daily
 QOL-dailyは、通常の日記にQOLの概念を追加した日記アプリです。  
 
 ## Requirement
-Ubuntu 22.04.3 LTS
+Ubuntu 22.04.3 LTS  
 ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]  
-Rails 7.1.3.4
+Rails 7.1.3.4  
 
 ## Usage
-git clone https://github.com/mtwt127/qol-daily.git
-cd qol-daily
-rails s
+git clone https://github.com/mtwt127/qol-daily.git  
+cd qol-daily  
+rails s  
 
 ブラウザでlocalhost:3000にアクセスすると、アプリの利用を開始できます。
 
@@ -30,7 +30,7 @@ rails s
 ## Reference
 https://www.youtube.com/watchv=IR_srJ2zL3o&t=3217s&pp=ygUEaHRtbA%3D%3D  
 https://www.youtube.com/watch?v=Tu6pWncYy4U&pp=ygUEaHRtbA%3D%3D  
-https://www.youtube.com/watch?v=CfdRXSrwLDo&t=2910s&pp=ygUPcmFpbHMg5Yid5b-D6ICF
-https://qiita.com/Kotabrog/items/fb328b72ac94137897af
-https://qiita.com/mutuki_daichi/items/3da60aa3513199bce16d
-https://qiita.com/sora154cm/items/ad9882219ff787c9c5dd
+https://www.youtube.com/watch?v=CfdRXSrwLDo&t=2910s&pp=ygUPcmFpbHMg5Yid5b-D6ICF  
+https://qiita.com/Kotabrog/items/fb328b72ac94137897af  
+https://qiita.com/mutuki_daichi/items/3da60aa3513199bce16d  
+https://qiita.com/sora154cm/items/ad9882219ff787c9c5dd  
